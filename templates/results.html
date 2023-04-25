@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Results</h1>
+
+<p>
+    <ul>
+        {% for value in values %}
+            {% if value %}
+                <li>{{value}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</p>
+<br />
+<button><a href="/">Home</a></button>
+{% endblock %}

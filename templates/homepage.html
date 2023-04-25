@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Welcome to the Site
+
+{% if 'name' in session %}
+    <button><a href="/form">Continue</a></button>
+    <form action="/remove-name">
+        <input type="submit" value="Remove the name">
+    </form>
+{% else %}
+    <form action="/save-name">
+        <label>Your name?</label>
+        <input type="text" name="name">
+        <input type="submit">
+    </form>
+{% endif %}
+
+{% endblock %}
